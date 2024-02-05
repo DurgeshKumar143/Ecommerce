@@ -1,0 +1,10 @@
+.box{
+    box-shadow: 10px 12px 5px rgb(242, 241, 234);
+    border-radius: 10px;
+     
+}
+.box >.img{
+    height: 50px;
+    margin-top: 8px;
+    
+}
