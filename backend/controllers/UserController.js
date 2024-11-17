@@ -127,10 +127,7 @@ exports.forgetPassword=catchAsyncError(async(req,res,next)=>{
 
 // Reset password
 exports.resetPassword=catchAsyncError(async(req,res,next)=>{
-    const resetPasswordToken=crypto
-    .createHash("sha256")
-    .update(req.params.token)
-    .digest("hex");
+    const resetPasswordToken=crypto.createHash("sha256").update(req.params.token).digest("hex");
 
     const user=await User.findOne({
         resetPasswordToken,
